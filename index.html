@@ -3,30 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viaje de la Cumbia</title>
+  <title>El Viaje de la Cumbia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
     body { margin:0; font-family:'Montserrat',sans-serif; color:#111; background:#fff; }
-    header { text-align:center; padding:2rem 0; font-size:2.5rem; font-weight:700; letter-spacing:.1em; }
-    nav { position: sticky; top:0; background:#fff; display:flex; justify-content: center; gap:1.5rem; padding:.75rem; font-size:.9rem; text-transform:uppercase; border-top:1px solid #000; border-bottom:1px solid #000; z-index:100; }
-    nav a { padding:.25rem; position:relative; color:#111; font-weight:400; }
-    nav a::after { content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:#111; transition:width .2s; }
-    nav a:hover::after, nav a.active::after { width:100%; }
+    header { text-align:center; padding:2rem 0; font-size:2.5rem; font-weight:700; letter-spacing:.1em; border-bottom:1px solid #000; }
+    nav { position: sticky; top:0; background:#fff; display:flex; justify-content: center; gap:1.5rem; padding:.75rem; font-size:.9rem; text-transform:uppercase; border-bottom:1px solid #000; z-index:100; }
+    nav a { padding:.5rem .75rem; color:#111; font-weight:700; }
+    /* Remove hover underline effect */
     .container { max-width:800px; margin:2rem auto; padding:0 1rem; }
     section { margin-bottom:2rem; }
-    h2 { font-size:1.3rem; font-weight:700; text-transform:uppercase; border-bottom:1px solid #111; display:inline-block; margin-bottom:.75rem; }
+    h2 { font-size:1.3rem; font-weight:700; text-transform:uppercase; border-bottom:2px solid #111; display:inline-block; margin-bottom:.75rem; }
     p { margin-bottom:1rem; font-size:1rem; line-height:1.4; }
     .grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; align-items:start; }
     img { width:100%; height:auto; display:block; margin-bottom:.75rem; }
-    /* Remove full-span for text blocks */
-    .grid p, .grid .text { grid-column: auto; }
-    /* Section-specific tweaks */
     #render iframe, #tema iframe { width:100%; height:300px; }
   </style>
 </head>
 <body>
-<header>Viaje de la Cumbia</header>
+<header>El Viaje de la Cumbia</header>
 <nav>
   <a href="#concepto">Concepto</a>
   <a href="#recorrido">Recorrido</a>
