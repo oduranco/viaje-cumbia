@@ -6,7 +6,6 @@
   <title>Viaje de la Cumbia</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Base */
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -18,7 +17,6 @@
       scroll-behavior: smooth;
     }
     a { text-decoration: none; color: inherit; }
-    /* Header */
     header {
       text-align: center;
       padding: 4rem 2rem 2rem;
@@ -27,8 +25,11 @@
       letter-spacing: 0.1em;
       border-bottom: 1px solid #000;
     }
-    /* Navigation */
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -37,6 +38,7 @@
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      border-bottom: 1px solid #ddd;
     }
     nav a {
       position: relative;
@@ -53,7 +55,6 @@
       transition: width 0.3s;
     }
     nav a:hover::after { width: 100%; }
-    /* Sections */
     section {
       padding: 6rem 2rem;
       max-width: 700px;
@@ -66,11 +67,11 @@
       margin-bottom: 1rem;
       border-bottom: 2px solid #111;
       display: inline-block;
+      color: #f08329;
     }
     p {
       margin-bottom: 1.5rem;
     }
-    /* Media */
     iframe {
       width: 100%;
       height: 360px;
@@ -84,7 +85,7 @@
   <nav>
     <a href="#concepto">Concepto</a>
     <a href="#recorrido">Recorrido</a>
-    <a href="#sonido">Sonora</a>
+    <a href="#sonido">Diseño Sonoro</a>
     <a href="#territorios">Territorios</a>
     <a href="#bio">Bio</a>
     <a href="#render">Render</a>
@@ -98,35 +99,36 @@
   </section>
 
   <section id="recorrido">
-    <h2>Recorrido</h2>
+    <h2>Recorrido de la experiencia</h2>
     <p>Duración: 15–20 minutos. Tres paredes proyectan el viaje fluvial grabado en 360°, editado para simular la navegación real. La inmersión se acentúa con fragmentos musicales locales y breves escenas de danza, registradas in situ, que dan la bienvenida al espectador en cada puerto.</p>
   </section>
 
   <section id="sonido">
-    <h2>Propuesta Sonora</h2>
-    <p>Grabación multicanal en cada punto del recorrido, capturando sonidos de agua, repiques de tambor y ejecuciones espontáneas de músicos. El diseño involucra un sistema de audio inmersivo d&b Audiotechnik Soundscape para recrear espacialidad real.</p>
-    <p>El cierre musical combina samples y grabaciones de campo en una composición original, ofreciendo una reinterpretación contemporánea de la cumbia ribereña.</p>
+    <h2>Diseño Sonoro</h2>
+    <p>Grabación multicanal en cada punto del recorrido, capturando sonidos de agua, repiques de tambor, expresiones vocales y ejecuciones espontáneas de músicos. También se registrarán danzas tradicionales para conformar un paisaje sonoro-corporal.</p>
+    <p>El diseño se realizará con el sistema d&b Audiotechnik Soundscape, configurado en la Sala Fanny Mikey para ofrecer una espacialidad tridimensional. El cierre musical combina samples y grabaciones de campo en una composición original que reinterpreta la cumbia ribereña con sensibilidad contemporánea.</p>
   </section>
 
   <section id="territorios">
     <h2>Territorios</h2>
-    <p>Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla. Cada localidad contribuye con matices sonoros y coreográficos únicos, donde el río y la cumbia se entrelazan para narrar la memoria colectiva del Caribe fluvial.</p>
+    <p>Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla. Cada localidad aporta matices sonoros y visuales únicos, donde el río y la cumbia se entrelazan en una memoria colectiva viva. La llegada a cada sitio está acompañada de la música tradicional del lugar y las expresiones dancísticas que la celebran, generando una experiencia integral que evoca las fiestas populares de cada región.</p>
   </section>
 
   <section id="bio">
     <h2>Bio</h2>
-    <p>Jorge Armando Durán Garzón (199X) es un artista sonoro y multidisciplinario de Colombia. Su obra abarca instalaciones inmersivas, activismo simbólico y producción audiovisual. En 2015 creó la campaña "Soy Devoto" sobre el valor del voto (Premio Mejor Innovación en Medios 2016). Ha dirigido experiencias en TouchDesigner y Unity, explorando interactividad y reconocimiento gestual. Como productor creativo en moda, lideró campañas y equipos internacionales. Su primer sencillo, "Hojita de Limón", reafirma su vínculo con la cumbia.</p>
+    <p>Jorge Armando Durán Garzón (199X) es un artista sonoro y multidisciplinario colombiano. Actualmente estudia Creación Sonora en la Universidad de Palermo, en Buenos Aires, y ha desarrollado experiencias inmersivas que combinan audio, video y tecnología. En 2015 lideró la campaña "Soy Devoto y no vendo mi voto", premiada en 2016 por el Anuario de la Publicidad Colombiana como Mejor Innovación en Medios. </p>
+    <p>Ha trabajado como coguionista en proyectos premiados como "El día que me enamoré" (Fundación Telefónica), "Ni un día más" (Proyecto 48) y "Sin Ella". También ha diseñado afiches y ha sido productor de campo en documentales como "Cosechas de Lluvia". Su trayectoria incluye además cinco años como productor creativo en moda, dirigiendo campañas desde el concepto hasta la ejecución en ciudades como Nueva York, Las Vegas y Bogotá. Su primer sencillo, “Hojita de Limón”, es una cumbia que mezcla raíz y estética íntima contemporánea.</p>
   </section>
 
   <section id="render">
     <h2>Render</h2>
-    <p>Simulación en Unity con recursos públicos para visualizar la instalación. El producto final será grabado en 360° con sonido original para la presentación en Sala Fanny Mikey.</p>
+    <p>Simulación realizada en Unity con sonidos de banco y recursos abiertos. Esta versión sirve como boceto interactivo de la instalación, accesible como video o ejecutable web. La experiencia final será creada desde cero con grabaciones originales e implementación técnica para sonido envolvente y proyección envolvente en la Sala Fanny Mikey.</p>
     <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
   </section>
 
   <section id="tema">
     <h2>Tema</h2>
-    <p>Fragmento musical en SoundCloud como primera aproximación. Versión definitiva en desarrollo con muestras propias del viaje.</p>
+    <p>Fragmento musical del artista como cierre de la experiencia inmersiva. Aunque fue producido con samples propios antes del viaje, representa la estética sonora que se busca desarrollar. El tema final será una nueva creación que incorpore los sonidos, voces y paisajes del viaje de la cumbia.</p>
     <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1799364933&color=%23f08329&auto_play=false&visual=true"></iframe>
   </section>
 </body>
