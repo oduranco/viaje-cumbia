@@ -9,9 +9,8 @@
     * { box-sizing: border-box; }
     body { margin:0; font-family:'Montserrat',sans-serif; color:#111; background:#fff; }
     header { text-align:center; padding:2rem 0; font-size:2.5rem; font-weight:700; letter-spacing:.1em; }
-    nav { position: sticky; top:0; background:#fff; display:flex; justify-content: center; gap:1.5rem; padding:.75rem; font-size:.9rem; text-transform:uppercase; border-top:1px solid #000; border-bottom:1px solid #000; z-index:100;
-      font-weight:400; }
-    nav a { padding:.25rem; position:relative; }
+    nav { position: sticky; top:0; background:#fff; display:flex; justify-content: center; gap:1.5rem; padding:.75rem; font-size:.9rem; text-transform:uppercase; border-top:1px solid #000; border-bottom:1px solid #000; z-index:100; }
+    nav a { padding:.25rem; position:relative; color:#111; font-weight:400; }
     nav a::after { content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:#111; transition:width .2s; }
     nav a:hover::after, nav a.active::after { width:100%; }
     .container { max-width:800px; margin:2rem auto; padding:0 1rem; }
@@ -19,12 +18,11 @@
     h2 { font-size:1.3rem; font-weight:700; text-transform:uppercase; border-bottom:1px solid #111; display:inline-block; margin-bottom:.75rem; }
     p { margin-bottom:1rem; font-size:1rem; line-height:1.4; }
     .grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; align-items:start; }
-    .grid .text { grid-column: span 2; }
     img { width:100%; height:auto; display:block; margin-bottom:.75rem; }
+    /* Remove full-span for text blocks */
+    .grid p, .grid .text { grid-column: auto; }
     /* Section-specific tweaks */
     #render iframe, #tema iframe { width:100%; height:300px; }
-    /* Reduce spacing for Render & Tema */
-    #render img, #tema img { display:none; }
   </style>
 </head>
 <body>
@@ -53,7 +51,9 @@
     <h2>Recorrido</h2>
     <div class="grid">
       <img src="placeholder-recorrido.jpg" alt="Recorrido">
-      <p class="text">Duración 15–20 minutos. Proyecciones en tres muros editadas para simular la navegación real. Fragmentos musicales locales y escenas de danza in situ dan la bienvenida en cada puerto.</p>
+      <div class="text">
+        <p>Duración 15–20 minutos. Proyecciones en tres muros editadas para simular la navegación real. Fragmentos musicales locales y escenas de danza in situ dan la bienvenida en cada puerto.</p>
+      </div>
     </div>
   </section>
   <section id="sonido">
@@ -69,7 +69,9 @@
     <h2>Territorios</h2>
     <div class="grid">
       <img src="placeholder-territorios.jpg" alt="Territorios">
-      <p class="text">Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla: cada región aporta colores sonoros y visuales propios, evocando las fiestas populares con música y danza tradicional.</p>
+      <div class="text">
+        <p>Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla: cada región aporta colores sonoros y visuales propios, evocando las fiestas populares con música y danza tradicional.</p>
+      </div>
     </div>
   </section>
   <section id="bio">
