@@ -71,27 +71,42 @@
 <div class="container">
   <section id="concepto">
     <h2>Concepto</h2>
-    <div id="concepto-texto"></div>
+    <div class="grid">
+      <img src="placeholder-concepto.jpg" alt="Concepto">
+      <div id="concepto-texto"></div>
+    </div>
   </section>
 
   <section id="recorrido">
     <h2>Recorrido</h2>
-    <div id="recorrido-texto"></div>
+    <div class="grid">
+      <img src="placeholder-recorrido.jpg" alt="Recorrido">
+      <div id="recorrido-texto"></div>
+    </div>
   </section>
 
   <section id="sonido">
     <h2>Diseño Sonoro</h2>
-    <div id="sonido-texto"></div>
+    <div class="grid">
+      <img src="placeholder-sonido.jpg" alt="Diseño Sonoro">
+      <div id="sonido-texto"></div>
+    </div>
   </section>
 
   <section id="territorios">
     <h2>Territorios</h2>
-    <div id="territorios-texto"></div>
+    <div class="grid">
+      <img src="placeholder-territorios.jpg" alt="Territorios">
+      <div id="territorios-texto"></div>
+    </div>
   </section>
 
   <section id="bio">
     <h2>Bio</h2>
-    <div id="bio-texto"></div>
+    <div class="grid">
+      <img src="placeholder-bio.jpg" alt="Bio">
+      <div id="bio-texto"></div>
+    </div>
   </section>
 
   <section id="render">
@@ -110,23 +125,23 @@
     <h2>Rider</h2>
     <div id="rider-texto"></div>
   </section>
-
-  <script>
-    fetch('text.json')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('concepto-texto').innerHTML = data.concepto;
-        document.getElementById('recorrido-texto').innerHTML = data.recorrido;
-        document.getElementById('sonido-texto').innerHTML = data.sonido;
-        document.getElementById('territorios-texto').innerHTML = data.territorios;
-        document.getElementById('bio-texto').innerHTML = data.bio;
-        document.getElementById('render-texto').innerHTML = data.render;
-        document.getElementById('tema-texto').innerHTML = data.tema;
-        document.getElementById('rider-texto').innerHTML = data.rider;
-      });
-  </script>
-
-  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 </div>
+
+<script>
+  fetch('text.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('concepto-texto').innerHTML = data.concepto;
+      document.getElementById('recorrido-texto').innerHTML = data.recorrido;
+      document.getElementById('sonido-texto').innerHTML = data.sonido;
+      document.getElementById('territorios-texto').innerHTML = data.territorios;
+      document.getElementById('bio-texto').innerHTML = data.bio;
+      document.getElementById('render-texto').innerHTML = data.render;
+      document.getElementById('tema-texto').innerHTML = data.tema;
+      document.getElementById('rider-texto').innerHTML = data.rider;
+    });
+</script>
+
+<button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 </body>
 </html>
