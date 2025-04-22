@@ -4,75 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viaje de la Cumbia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
-
+    /* Base */
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Space Grotesk', sans-serif;
-      background-color: #f8f8f8;
-      color: #111;
       margin: 0;
       padding: 0;
-    }
-
-    header {
-      background-color: #f8f8f8;
+      font-family: 'Space Grotesk', sans-serif;
+      background: #fff;
       color: #111;
-      padding: 4rem 2rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 700;
+      line-height: 1.5;
+      scroll-behavior: smooth;
     }
-
+    a { text-decoration: none; color: inherit; }
+    /* Header */
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid #000;
+    }
+    /* Navigation */
     nav {
-      padding: 1rem;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 2rem;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      background-color: #fff;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #111;
-      font-weight: bold;
-      font-size: 0.9rem;
-      letter-spacing: 0.05rem;
+      padding: 1rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
-
+    nav a {
+      position: relative;
+      padding-bottom: 0.2rem;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: #111;
+      left: 0;
+      bottom: 0;
+      transition: width 0.3s;
+    }
+    nav a:hover::after { width: 100%; }
+    /* Sections */
     section {
-      padding: 3rem 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      border-bottom: 1px solid #e0e0e0;
-      background-color: #fff;
+      padding: 6rem 2rem;
+      max-width: 700px;
+      margin: auto;
     }
-
     h2 {
-      color: #f08329;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
       margin-bottom: 1rem;
+      border-bottom: 2px solid #111;
+      display: inline-block;
     }
-
+    p {
+      margin-bottom: 1.5rem;
+    }
+    /* Media */
     iframe {
       width: 100%;
-      height: 400px;
-      margin-top: 1rem;
+      height: 360px;
       border: none;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    VIAJE DE LA CUMBIA
-  </header>
+  <header>VIAJE DE LA CUMBIA</header>
   <nav>
     <a href="#concepto">Concepto</a>
     <a href="#recorrido">Recorrido</a>
-    <a href="#sonido">Propuesta Sonora</a>
+    <a href="#sonido">Sonora</a>
     <a href="#territorios">Territorios</a>
     <a href="#bio">Bio</a>
     <a href="#render">Render</a>
@@ -81,40 +93,41 @@
 
   <section id="concepto">
     <h2>Concepto</h2>
-    <p><em>Viaje de la Cumbia</em> es una obra inmersiva...</p>
+    <p><em>Viaje de la Cumbia</em> es una instalación inmersiva que fusiona paisaje, música y danza del río Magdalena en un solo recorrido sensorial. A través de proyecciones panorámicas y sonido envolvente, la sala se transforma en una canoa virtual que navega por Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla, revelando la riqueza cultural de cada comunidad ribereña.</p>
+    <p>La obra cuestiona la relación entre territorio e identidad, invitando al público a experimentar el río como arteria viviente de la cumbia, para concluir con una pieza original que sintetiza grabaciones de campo y texturas sonoras recolectadas durante el viaje.</p>
   </section>
 
   <section id="recorrido">
-    <h2>Recorrido de la experiencia</h2>
-    <p>La experiencia tiene una duración de 15 a 20 minutos...</p>
+    <h2>Recorrido</h2>
+    <p>Duración: 15–20 minutos. Tres paredes proyectan el viaje fluvial grabado en 360°, editado para simular la navegación real. La inmersión se acentúa con fragmentos musicales locales y breves escenas de danza, registradas in situ, que dan la bienvenida al espectador en cada puerto.</p>
   </section>
 
   <section id="sonido">
     <h2>Propuesta Sonora</h2>
-    <p>La propuesta sonora se construye a partir de grabaciones...</p>
+    <p>Grabación multicanal en cada punto del recorrido, capturando sonidos de agua, repiques de tambor y ejecuciones espontáneas de músicos. El diseño involucra un sistema de audio inmersivo d&b Audiotechnik Soundscape para recrear espacialidad real.</p>
+    <p>El cierre musical combina samples y grabaciones de campo en una composición original, ofreciendo una reinterpretación contemporánea de la cumbia ribereña.</p>
   </section>
 
   <section id="territorios">
-    <h2>Vínculo con los Territorios</h2>
-    <p>Cada lugar del recorrido fue elegido por su relevancia...</p>
+    <h2>Territorios</h2>
+    <p>Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla. Cada localidad contribuye con matices sonoros y coreográficos únicos, donde el río y la cumbia se entrelazan para narrar la memoria colectiva del Caribe fluvial.</p>
   </section>
 
   <section id="bio">
-    <h2>Bio del Artista</h2>
-    <p>Pronto será cargada.</p>
+    <h2>Bio</h2>
+    <p>Jorge Armando Durán Garzón (199X) es un artista sonoro y multidisciplinario de Colombia. Su obra abarca instalaciones inmersivas, activismo simbólico y producción audiovisual. En 2015 creó la campaña "Soy Devoto" sobre el valor del voto (Premio Mejor Innovación en Medios 2016). Ha dirigido experiencias en TouchDesigner y Unity, explorando interactividad y reconocimiento gestual. Como productor creativo en moda, lideró campañas y equipos internacionales. Su primer sencillo, "Hojita de Limón", reafirma su vínculo con la cumbia.</p>
   </section>
 
   <section id="render">
-    <h2>Render Unity</h2>
-    <p>Este render es una maqueta realizada con herramientas libres como Unity...</p>
+    <h2>Render</h2>
+    <p>Simulación en Unity con recursos públicos para visualizar la instalación. El producto final será grabado en 360° con sonido original para la presentación en Sala Fanny Mikey.</p>
     <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
   </section>
 
   <section id="tema">
-    <h2>Tema muestra del Viaje de la Cumbia</h2>
-    <p>Este tema fue compuesto por el artista usando samples y grabaciones propias...</p>
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1799364933&color=%23f08329&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    <h2>Tema</h2>
+    <p>Fragmento musical en SoundCloud como primera aproximación. Versión definitiva en desarrollo con muestras propias del viaje.</p>
+    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1799364933&color=%23f08329&auto_play=false&visual=true"></iframe>
   </section>
 </body>
 </html>
