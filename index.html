@@ -7,161 +7,91 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #fff;
-      color: #111;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-    a { text-decoration: none; color: inherit; }
-    header {
-      text-align: center;
-      padding: 4rem 2rem 2rem;
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      border-bottom: 1px solid #000;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 1rem;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border-bottom: 1px solid #ddd;
-    }
-    nav a {
-      position: relative;
-      padding-bottom: 0.2rem;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1px;
-      background: #111;
-      left: 0;
-      bottom: 0;
-      transition: width 0.3s;
-    }
-    nav a:hover::after { width: 100%; }
-    section {
-      padding: 4rem 2rem;
-      max-width: 700px;
-      margin: auto;
-      position: relative;
-    }
-    h2 {
-      font-weight: 700;
-      font-size: 1.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #111;
-      display: inline-block;
-      color: #111;
-    }
-    p {
-      margin-bottom: 1.25rem;
-      font-size: 1rem;
-      font-weight: 400;
-    }
-    .section-image {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 1rem 0;
-      object-fit: cover;
-    }
-    iframe {
-      width: 100%;
-      height: 360px;
-      border: none;
-      margin-top: 1rem;
-    }
+    body { margin:0; font-family:'Montserrat',sans-serif; color:#111; background:#fff; }
+    header { text-align:center; padding:2rem 0; font-size:2.5rem; font-weight:700; letter-spacing:.1em; }
+    nav { position: sticky; top:0; background:#fff; display:flex; justify-content: center; gap:1.5rem; padding:.75rem; font-size:.9rem; text-transform:uppercase; border-top:1px solid #000; border-bottom:1px solid #000; z-index:100;
+      font-weight:400; }
+    nav a { padding:.25rem; position:relative; }
+    nav a::after { content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:#111; transition:width .2s; }
+    nav a:hover::after, nav a.active::after { width:100%; }
+    .container { max-width:800px; margin:2rem auto; padding:0 1rem; }
+    section { margin-bottom:2rem; }
+    h2 { font-size:1.3rem; font-weight:700; text-transform:uppercase; border-bottom:1px solid #111; display:inline-block; margin-bottom:.75rem; }
+    p { margin-bottom:1rem; font-size:1rem; line-height:1.4; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; align-items:start; }
+    .grid .text { grid-column: span 2; }
+    img { width:100%; height:auto; display:block; margin-bottom:.75rem; }
+    /* Section-specific tweaks */
+    #render iframe, #tema iframe { width:100%; height:300px; }
+    /* Reduce spacing for Render & Tema */
+    #render img, #tema img { display:none; }
   </style>
 </head>
 <body>
-  <header>VIAJE DE LA CUMBIA</header>
-  <nav>
-    <a href="#concepto">Concepto</a>
-    <a href="#recorrido">Recorrido</a>
-    <a href="#sonido">Diseño Sonoro</a>
-    <a href="#territorios">Territorios</a>
-    <a href="#bio">Bio</a>
-    <a href="#render">Render</a>
-    <a href="#tema">Tema</a>
-  </nav>
-
+<header>Viaje de la Cumbia</header>
+<nav>
+  <a href="#concepto">Concepto</a>
+  <a href="#recorrido">Recorrido</a>
+  <a href="#sonido">Diseño Sonoro</a>
+  <a href="#territorios">Territorios</a>
+  <a href="#bio">Bio</a>
+  <a href="#render">Render</a>
+  <a href="#tema">Tema</a>
+</nav>
+<div class="container">
   <section id="concepto">
     <h2>Concepto</h2>
-    <img class="section-image" src="placeholder-concepto.jpg" alt="Concepto placeholder">
-    <div id="concepto-content"></div>
+    <div class="grid">
+      <img src="placeholder-concepto.jpg" alt="Concepto">
+      <div class="text">
+        <p><em>Viaje de la Cumbia</em> es una instalación inmersiva que fusiona paisaje, música y danza del río Magdalena en un solo recorrido sensorial. A través de proyecciones panorámicas y sonido envolvente, la sala se transforma en una canoa virtual que navega por Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla.</p>
+        <p>La obra cuestiona la relación entre territorio e identidad, invitando al público a experimentar el río como arteria viviente de la cumbia y concluir con una pieza original que sintetiza grabaciones de campo.</p>
+      </div>
+    </div>
   </section>
-
   <section id="recorrido">
-    <h2>Recorrido de la experiencia</h2>
-    <img class="section-image" src="placeholder-recorrido.jpg" alt="Recorrido placeholder">
-    <div id="recorrido-content"></div>
+    <h2>Recorrido</h2>
+    <div class="grid">
+      <img src="placeholder-recorrido.jpg" alt="Recorrido">
+      <p class="text">Duración 15–20 minutos. Proyecciones en tres muros editadas para simular la navegación real. Fragmentos musicales locales y escenas de danza in situ dan la bienvenida en cada puerto.</p>
+    </div>
   </section>
-
   <section id="sonido">
     <h2>Diseño Sonoro</h2>
-    <img class="section-image" src="placeholder-sonido.jpg" alt="Diseño Sonoro placeholder">
-    <div id="sonido-content"></div>
+    <div class="grid">
+      <img src="placeholder-sonido.jpg" alt="Diseño Sonoro">
+      <div class="text">
+        <p>Grabación multicanal en cada punto del recorrido: sonidos de agua, repiques de tambor, voces y música tradicional con danzas registradas. Instalación en Sala Fanny Mikey con d&b Audiotechnik Soundscape para espacialidad tridimensional.</p>
+      </div>
+    </div>
   </section>
-
   <section id="territorios">
     <h2>Territorios</h2>
-    <img class="section-image" src="placeholder-territorios.jpg" alt="Territorios placeholder">
-    <div id="territorios-content"></div>
+    <div class="grid">
+      <img src="placeholder-territorios.jpg" alt="Territorios">
+      <p class="text">Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla: cada región aporta colores sonoros y visuales propios, evocando las fiestas populares con música y danza tradicional.</p>
+    </div>
   </section>
-
   <section id="bio">
     <h2>Bio</h2>
-    <img class="section-image" src="placeholder-bio.jpg" alt="Bio placeholder">
-    <div id="bio-content"></div>
+    <div class="grid">
+      <img src="placeholder-bio.jpg" alt="Bio">
+      <div class="text">
+        <p>Jorge Armando Durán Garzón es artista sonoro y multidisciplinario. Estudia Creación Sonora en Buenos Aires y lideró la campaña “Soy Devoto y no vendo mi voto” (2015–2016), premiada por el Anuario de la Publicidad Colombiana.</p>
+        <p>Co-guionista en “El día que me enamoré”, “Ni un día más” y “Sin Ella”. Productor de campo en “Cosechas de Lluvia” y creativo de moda en campañas internacionales. Debutó con el sencillo “Hojita de Limón”.</p>
+      </div>
+    </div>
   </section>
-
   <section id="render">
     <h2>Render</h2>
-    <img class="section-image" src="placeholder-render.jpg" alt="Render placeholder">
-    <div id="render-content"></div>
+    <p>Simulación en Unity: video con recursos abiertos para boceto interactivo. La experiencia final usará grabaciones originales y tecnología inmersiva.</p>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
   </section>
-
   <section id="tema">
     <h2>Tema</h2>
-    <img class="section-image" src="placeholder-tema.jpg" alt="Tema placeholder">
-    <div id="tema-content"></div>
+    <p>Fragmento musical de cierre, diseñado con samples previos y regrabaciones de campo. Próxima versión integrará sonidos y paisajes originales del viaje.</p>
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1965049119&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
   </section>
-
-  <script>
-    // Carga dinámica de textos desde texts.json
-    async function loadTexts() {
-      try {
-        const res = await fetch('texts.json');
-        const texts = await res.json();
-        Object.keys(texts).forEach(key => {
-          const sectionContent = document.getElementById(`${key}-content`);
-          if (sectionContent) {
-            sectionContent.innerHTML = texts[key].content;
-          }
-        });
-      } catch (e) {
-        console.error('Error cargando textos:', e);
-      }
-    }
-    loadTexts();
-  </script>
+</div>
 </body>
 </html>
