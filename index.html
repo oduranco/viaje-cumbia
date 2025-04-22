@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; color: #111; background: #fff; position: relative; }
+    body { font-family: 'Montserrat', sans-serif; color: #111; background: #fff; line-height: 1.6; scroll-behavior: smooth; }
     header { text-align: center; padding: 2rem 0; font-size: 2.5rem; font-weight: 700; letter-spacing: .1em; }
     nav {
       position: sticky;
@@ -25,7 +25,10 @@
     nav a { color: #fff; font-weight: 700; text-decoration: none; }
     nav a:hover { opacity: 0.8; }
     .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
-    section { margin-bottom: 2rem; scroll-margin-top: 80px; }
+    section {
+      margin-bottom: 2rem;
+      scroll-margin-top: 80px;
+    }
     h2 {
       font-size: 1.3rem;
       font-weight: 700;
@@ -35,30 +38,22 @@
     p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.4; }
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
     img { width: 100%; height: auto; display: block; margin-bottom: .75rem; }
-    #render iframe, #tema iframe { width: 100%; height: 300px; }
-
-    /* Back to top button */
-    #back-to-top {
+    iframe { width: 100%; height: 300px; border: none; margin-top: 1rem; }
+    #scrollTopBtn {
       position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 3rem;
-      height: 3rem;
+      bottom: 20px;
+      right: 20px;
       background: #000;
       color: #fff;
       border: none;
       border-radius: 50%;
+      width: 40px;
+      height: 40px;
       font-size: 1.5rem;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      opacity: 0.7;
-      transition: opacity 0.3s;
-      z-index: 200;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      z-index: 999;
     }
-    #back-to-top:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -71,76 +66,67 @@
   <a href="#bio">Bio</a>
   <a href="#render">Render</a>
   <a href="#tema">Tema</a>
+  <a href="#rider">Rider</a>
 </nav>
 <div class="container">
   <section id="concepto">
     <h2>Concepto</h2>
-    <div class="grid">
-      <img src="placeholder-concepto.jpg" alt="Concepto">
-      <div class="text">
-        <p><em>Viaje de la Cumbia</em> es una instalación inmersiva que fusiona paisaje, música y danza del río Magdalena en un solo recorrido sensorial. A través de proyecciones panorámicas y sonido envolvente, la sala se transforma en una canoa virtual que navega por Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla.</p>
-        <p>La obra cuestiona la relación entre territorio e identidad, invitando al público a experimentar el río como arteria viviente de la cumbia y concluir con una pieza original que sintetiza grabaciones de campo.</p>
-      </div>
-    </div>
+    <div id="concepto-texto"></div>
   </section>
+
   <section id="recorrido">
     <h2>Recorrido</h2>
-    <div class="grid">
-      <img src="placeholder-recorrido.jpg" alt="Recorrido">
-      <div class="text">
-        <p>Duración 15–20 minutos. Proyecciones en tres muros editadas para simular la navegación real. Fragmentos musicales locales y escenas de danza in situ dan la bienvenida en cada puerto.</p>
-      </div>
-    </div>
+    <div id="recorrido-texto"></div>
   </section>
+
   <section id="sonido">
     <h2>Diseño Sonoro</h2>
-    <div class="grid">
-      <img src="placeholder-sonido.jpg" alt="Diseño Sonoro">
-      <div class="text">
-        <p>Grabación multicanal en cada punto del recorrido: sonidos de agua, repiques de tambor, voces y música tradicional con danzas registradas. Instalación en Sala Fanny Mikey con d&b Audiotechnik Soundscape para espacialidad tridimensional.</p>
-      </div>
-    </div>
+    <div id="sonido-texto"></div>
   </section>
+
   <section id="territorios">
     <h2>Territorios</h2>
-    <div class="grid">
-      <img src="placeholder-territorios.jpg" alt="Territorios">
-      <div class="text">
-        <p>Guamal, El Banco, San Jacinto, Plato, Ciénaga y Barranquilla: cada región aporta colores sonoros y visuales propios, evocando las fiestas populares con música y danza tradicional.</p>
-      </div>
-    </div>
+    <div id="territorios-texto"></div>
   </section>
+
   <section id="bio">
     <h2>Bio</h2>
-    <div class="grid">
-      <img src="placeholder-bio.jpg" alt="Bio">
-      <div class="text">
-        <p>Jorge Armando Durán Garzón es artista sonoro y multidisciplinario. Estudia Creación Sonora en Buenos Aires y lideró la campaña “Soy Devoto y no vendo mi voto” (2015–2016), premiada por el Anuario de la Publicidad Colombiana.</p>
-        <p>Co-guionista en “El día que me enamoré”, “Ni un día más” y “Sin Ella”. Productor de campo en “Cosechas de Lluvia” y creativo de moda en campañas internacionales. Debutó con el sencillo “Hojita de Limón”.</p>
-      </div>
-    </div>
+    <div id="bio-texto"></div>
   </section>
+
   <section id="render">
     <h2>Render</h2>
-    <p>Simulación en Unity: video con recursos abiertos para boceto interactivo. La experiencia final usará grabaciones originales y tecnología inmersiva.</p>
+    <div id="render-texto"></div>
     <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
   </section>
+
   <section id="tema">
     <h2>Tema</h2>
-    <p>Fragmento musical de cierre, diseñado con samples previos y regrabaciones de campo. Próxima versión integrará sonidos y paisajes originales del viaje.</p>
+    <div id="tema-texto"></div>
     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1965049119&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
   </section>
+
+  <section id="rider">
+    <h2>Rider</h2>
+    <div id="rider-texto"></div>
+  </section>
+
+  <script>
+    fetch('text.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('concepto-texto').innerHTML = data.concepto;
+        document.getElementById('recorrido-texto').innerHTML = data.recorrido;
+        document.getElementById('sonido-texto').innerHTML = data.sonido;
+        document.getElementById('territorios-texto').innerHTML = data.territorios;
+        document.getElementById('bio-texto').innerHTML = data.bio;
+        document.getElementById('render-texto').innerHTML = data.render;
+        document.getElementById('tema-texto').innerHTML = data.tema;
+        document.getElementById('rider-texto').innerHTML = data.rider;
+      });
+  </script>
+
+  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 </div>
-
-<!-- Back to Top Button -->
-<button id="back-to-top" title="Volver arriba">↑</button>
-
-<script>
-  const btn = document.getElementById('back-to-top');
-  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  window.addEventListener('scroll', () => {
-    btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
-  });
-</script>
 </body>
 </html>
