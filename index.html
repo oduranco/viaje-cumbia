@@ -138,5 +138,23 @@
       <a href="https://soundcloud.com/jorge-armando-duran-garzon" title="Mando Durán" target="_blank" style="color: #cccccc; text-decoration: none;">Mando Durán</a> · <a href="https://soundcloud.com/jorge-armando-duran-garzon/viaje-de-la-cumbia-con-soso-a" title="Viaje De La Cumbia con Sosó" target="_blank" style="color: #cccccc; text-decoration: none;">Viaje De La Cumbia con Sosó</a>
     </div>
   </section>
+  <script>
+    // Carga dinámica de textos desde texts.json
+    async function loadTexts() {
+      try {
+        const res = await fetch('texts.json');
+        const texts = await res.json();
+        Object.keys(texts).forEach(key => {
+          const section = document.getElementById(key);
+          if (section) {
+            section.innerHTML = `<h2>${texts[key].title}</h2>` + texts[key].content;
+          }
+        });
+      } catch (e) {
+        console.error('Error cargando textos:', e);
+      }
+    }
+    loadTexts();
+  </script>
 </body>
 </html>
