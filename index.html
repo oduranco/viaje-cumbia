@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; color: #111; background: #fff; }
+    body { font-family: 'Montserrat', sans-serif; color: #111; background: #fff; position: relative; }
     header { text-align: center; padding: 2rem 0; font-size: 2.5rem; font-weight: 700; letter-spacing: .1em; }
     nav {
       position: sticky;
@@ -25,10 +25,7 @@
     nav a { color: #fff; font-weight: 700; text-decoration: none; }
     nav a:hover { opacity: 0.8; }
     .container { max-width: 800px; margin: 0 auto; padding: 1rem; }
-    section {
-      margin-bottom: 2rem;
-      scroll-margin-top: 80px;
-    }
+    section { margin-bottom: 2rem; scroll-margin-top: 80px; }
     h2 {
       font-size: 1.3rem;
       font-weight: 700;
@@ -39,6 +36,29 @@
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
     img { width: 100%; height: auto; display: block; margin-bottom: .75rem; }
     #render iframe, #tema iframe { width: 100%; height: 300px; }
+
+    /* Back to top button */
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 3rem;
+      height: 3rem;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      z-index: 200;
+    }
+    #back-to-top:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -111,5 +131,16 @@
     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1965049119&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
   </section>
 </div>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" title="Volver arriba">↑</button>
+
+<script>
+  const btn = document.getElementById('back-to-top');
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', () => {
+    btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+  });
+</script>
 </body>
 </html>
